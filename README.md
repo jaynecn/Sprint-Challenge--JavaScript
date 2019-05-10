@@ -29,14 +29,31 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+.forEach cannot be chained with other array methods.
 
 2. What is the difference between a function and a method?
 
+A method is a term referring to a particular type of function.  A method is a function that is within an object.  A method is expressed as a value within a key:value pair of an object.  We use the term function when a function is on its own and/or not part of an object.
+
 3. What is closure?
+Closure is the term which refers to a particular phenomenon which happens regarding the global scope and block scope of functions.  The code inside block scope has the ability to refer and use variables and functions in the outside/global scope.  But the variables/functions/code within global scope doesNOT have the ability to refer and use the code within the block scope.  
+I think of it a bit like CCTV, where the block scope is in the HQ with all the monitors watching what’s happening, and the global scope is outside the HQ but being watched through the cameras (!)
+
 
 4. Describe the four rules of the 'this' keyword.
 
+GLOBAL BINDING - a function is on its own ie. not in an object, not a method. It is then part of the global scope.
+IMPLICIT BINDING - using the ${} syntax, you can refer to a specific key within the object. For example, ${this.name}. Using 'this' means it is anonymised and the function can be used multiple times.  This can save a lot of time coding. You can use this in a function to synchronise a piece of data with others eg. this.name = data.name
+
+NEW BINDING- Used in combination with implicit binding, you can use the ‘new’ keyword to create a brand new constructor function which uses the function created with implicit binding.  
+Eg.  const louise = new Person('Louise', 22);
+louise.welcome();
+
+EXPLICIT BINDING - The term ‘.call’ is preceded by the name of a parent function. Then in parentheses, the ‘this’ keyword is used to link with the child function that it sits in.  This link then gives them access to the properties of the parent.
+
+
 5. Why do we need super() in an extended class?
+Super is used in the same way that we use .call for explicit binding.  It links the parent class with the child class and makes sure it inherits all of the properties of the parent.
 
 ## Project Set up
 
