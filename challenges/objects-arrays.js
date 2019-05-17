@@ -103,7 +103,7 @@ console.log(contactInfo);
 const uni = [];
 for(let i = 0; i < graduates.length; i++) {
   if (graduates[i].university.includes("Uni")) {
-    console.log(uni.push(graduates[i].university));
+    uni.push(graduates[i].university);
   }
 }
 console.log(uni);
@@ -134,7 +134,7 @@ const animalNames = [];
 zooAnimals.forEach (function(info) {
   this.animal_name = info.animal_name;
   this.scientific_name = info.scientific_name;
-  console.log(`Name: ${this.animal_name}, Scientific: ${this.scientific_name}.`)
+  return animalNames.push(`Name: ${this.animal_name}, Scientific: ${this.scientific_name}.`)
 });
 
 console.log(animalNames);
@@ -148,7 +148,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 const lowerCase = [];
 zooAnimals.map(function(info) {
   this.animal_name = info.animal_name;
-  console.log(animal_name.toLowerCase())
+  return lowerCase.push(animal_name.toLowerCase());
 });
 
 console.log(lowerCase); 
@@ -158,14 +158,14 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+const lowerPopulation = [];
 zooAnimals.filter(function(info) {
   // this.population = info.population;
   if(info.population < 5){
-    console.log(info.animal_name);
+    return lowerPopulation.push(info.animal_name);
   }
 });
-console.log(largerPopulation);
+console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
 
@@ -173,16 +173,15 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 // const populationTotal = 0;
-// zooAnimals.reduce(function(total, info) {
-//   this.population = info.population;
-//   return total + info;
-// }, 0);
-// console.log(populationTotal);
+// 
+let allZoos = zooAnimals.reduce((total, info) => {
+  this.population = info.population;
+  return total += info.population;
+}, 0);
+console.log(allZoos);
+  
 
+// Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
-/* 
-
-Stretch: If you haven't already, convert your array method callbacks into arrow functions.
-
-*/
+// */
 
