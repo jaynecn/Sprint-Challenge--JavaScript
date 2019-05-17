@@ -43,7 +43,7 @@ I think of it a bit like CCTV, where the block scope is in the HQ with all the m
 4. Describe the four rules of the 'this' keyword.
 
 GLOBAL BINDING - a function is on its own ie. not in an object, not a method. It is then part of the global scope.
-IMPLICIT BINDING - using the ${} syntax, you can refer to a specific key within the object. For example, ${this.name}. Using 'this' means it is anonymised and the function can be used multiple times.  This can save a lot of time coding. You can use this in a function to synchronise a piece of data with others eg. this.name = data.name
+IMPLICIT BINDING - using the ${} syntax, you can refer to a specific key within the object. Implicit binding can be used with any method. For example, ${this.name}. Using 'this' means it is anonymised the dynamic.  The function can then be used multiple times.  This can save a lot of time coding. You can use this in a function to synchronise a piece of data with others eg. this.name = data.name
 
 NEW BINDING- Used in combination with implicit binding, you can use the ‘new’ keyword to create a brand new constructor function which uses the function created with implicit binding.  
 Eg.  const louise = new Person('Louise', 22);
