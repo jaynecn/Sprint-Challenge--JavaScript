@@ -5,6 +5,9 @@
 // /* == Step 1: Base Constructor ==
 //   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 // */
+
+// // SELECT ALL AND UNCOMMENT IT ALL TO GET THE SOLUTION
+
 // function CuboidMaker(info) {
 //   this.length = info.length;
 //   this.width = info.width;
